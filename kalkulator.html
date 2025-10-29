@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Sederhana</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 20px; }
+    input { width: 50px; text-align: center; }
+    button { padding: 5px 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Kalkulator</h1>
+  <input type="number" id="num1"> +
+  <input type="number" id="num2">
+  <button onclick="hitung()">=</button>
+  <span id="hasil"></span>
+
+  <script>
+    function hitung() {
+      let n1 = parseFloat(document.getElementById('num1').value) || 0;
+      let n2 = parseFloat(document.getElementById('num2').value) || 0;
+      document.getElementById('hasil').textContent = n1 + n2;
+    }
+  </script>
+</body>
+</html>
